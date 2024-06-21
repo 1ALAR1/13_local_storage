@@ -11,7 +11,34 @@
 </head>
 
 <body>
+  <header class="p-3 text-bg-dark">
+    <div class="container">
+        <div
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">  
+          </div>
+            <h1 class="text-center">News</h1>
+    </div>
+  </header>
   <div class="news-grid" id="news-list"></div>
+  
+  <nav aria-label="Page navigation example">
+    <ul id="pagination" class="disabled pagination justify-content-center" >
+      <li class="page-item">
+        <a id="btnPrev" class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      
+      <li class="page-item">
+        <a id="btnNext" class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <div id="news-list" class="row mt-3"></div>
+
   <script src="script.js"></script>
 
 

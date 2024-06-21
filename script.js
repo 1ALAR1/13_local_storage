@@ -11,21 +11,14 @@ function getCookie() {
     return res;
 }
 
-window.onload = () => {
-    // cookie
-    // const cookie = getCookie();
 
-    // local storage
+window.onload = () => {
+
     const json = localStorage.getItem("user");
     const user = JSON.parse(json);
 
     const userButtons = document.getElementById("userButtons");
 
-    // cookie
-    // if("user" in cookie) {
-    // const user = JSON.parse(cookie.user);
-
-    // local storage
     if (user != null) {
         const buttonProfile = document.createElement("button");
         buttonProfile.onclick = () => {
@@ -40,10 +33,6 @@ window.onload = () => {
         buttonLogout.setAttribute("type", "button");
         buttonLogout.setAttribute("class", "btn btn-outline-light");
         buttonLogout.onclick = () => {
-            // cookie
-            // document.cookie = `user=''; expires=${new Date(0)};`;
-
-            // local storage
             localStorage.removeItem("user");
             window.location.href = "/signin";
         };
@@ -70,9 +59,3 @@ window.onload = () => {
     }
 };
 
-
-
-
-// localStorage.removeItem("key"); - видаляє дані по ключу 
-// localStorage.getItem("key"); - повертає значення по ключу. Якщо такого немає то поверне null
-// localStorage.setItem("key", "value"); - якщо ключ є то перепише йому value. Якщо ключа немає то створить новий.
